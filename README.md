@@ -7,9 +7,9 @@ This is freaking awesome.
 
 This is **one** application running on 3 different frameworks:
 
-- the front-end module is running on **Silex** ("`/`")
-- the blog module is running on **Symfony 2** ("`/blog`")
-- the back-office module is running on **Zend Framework 1** ("`/admin`")
+- the front-end module is running on **Silex** (`/`)
+- the blog module is running on **Symfony 2** (`/blog`)
+- the back-office module is running on **Zend Framework 1** (`/admin`)
 
 These modules are not independent sup-applications. They really are modules of one application:
 
@@ -17,7 +17,7 @@ These modules are not independent sup-applications. They really are modules of o
 - they share the same DI container and its configuration (PHP-DI is used here)
 - they share the same model and services (loggers, mailer, ORM, repositories, …)
 
-The model code (model classes, repositories and services) are therefore framework-agnostic.
+The model code (model classes, repositories and services) is framework-agnostic.
 
 ## Why?
 
