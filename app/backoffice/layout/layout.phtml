@@ -31,8 +31,8 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="label label-primary">Blog</span></a></li>
-                    <li><a href="#">(powered by) Symfony2</a></li>
+                    <li><a href="#"><span class="label label-danger">Back-Office</span></a></li>
+                    <li><a href="#">(powered by) Zend Framework 1</a></li>
                 </ul>
             </div>
         </div>
@@ -40,8 +40,7 @@
 
     <div class="container">
 
-        {% block content %}
-        {% endblock %}
+        <?php echo $this->layout()->content ?>
 
     </div>
 

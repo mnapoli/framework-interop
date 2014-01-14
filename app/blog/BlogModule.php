@@ -8,7 +8,7 @@ use Symfony\Bundle\WebProfilerBundle\WebProfilerBundle;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-class BlogApp extends Kernel
+class BlogModule extends Kernel
 {
     public function registerBundles()
     {

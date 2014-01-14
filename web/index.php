@@ -6,10 +6,12 @@ use Symfony\Component\HttpFoundation\Request;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 require_once __DIR__ . '/../app/frontend/init.php';
-require_once __DIR__ . '/../app/blog/BlogApp.php';
+require_once __DIR__ . '/../app/blog/BlogModule.php';
+require_once __DIR__ . '/../app/backoffice/BackOfficeModule.php';
 
 $map = [
-    '/blog' => new BlogApp('dev', true),
+    '/blog' => new BlogModule('dev', true),
+    '/admin' => new BackOfficeModule(),
 ];
 
 $router = (new \Stack\Builder())
