@@ -15,7 +15,9 @@ class InMemoryArticleRepository implements ArticleRepository
     public function __construct()
     {
         $this->articles = [
+            new Article('One great article', 'I hate it when people don\'t finish their'),
             new Article('Hello world', 'This is a test article.'),
+            new Article('Grand opening', 'We are opening our blog. This is going to be great!'),
         ];
     }
 
