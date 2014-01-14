@@ -34,6 +34,11 @@ class BlogApp extends Kernel
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 
+    public function getLogDir()
+    {
+        return $this->rootDir . '/../logs';
+    }
+
     /**
      * Gets the container's base class.
      *

@@ -3,6 +3,8 @@ build/
 vendor/
 composer.phar
 composer.lock
+app/logs/*
+!app/logs/.gitkeep
 
 .idea/*
 .vagrant/*

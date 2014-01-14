@@ -2,6 +2,7 @@
 
 use Acme\Blog\Article\ArticleRepository;
 use Mouf\Interop\Silex\Application;
+use Psr\Log\LoggerInterface;
 use Silex\Provider\TwigServiceProvider;
 
 $frontend = new Application();
@@ -23,6 +24,8 @@ $frontend->get('/', function (Application $app) {
     /** @var ArticleRepository $articleRepository */
     $articleRepository = $app[ArticleRepository::class];
     $count = count($articleRepository->getAll());
+
+    $app[LoggerInterface::class]->debug('Someone was on the home page');
 
     return $app['twig']->render('home.twig', ['articleCount' => $count]);
 });
