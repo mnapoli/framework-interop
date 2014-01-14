@@ -1,6 +1,5 @@
 bootstrap.php.cache
 cache/*
-config/parameters.yml
 logs/*
 !cache/.gitkeep
 !logs/.gitkeep
