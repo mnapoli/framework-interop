@@ -58,9 +58,7 @@ class BlogApp extends Kernel
         // http://php-di.org/doc/container-configuration
         $builder = new \DI\ContainerBuilder();
         $builder->wrapContainer($compositeContainer);
-        $builder->addDefinitions(__DIR__ . '/config/config.php');
-
-        $builder->build()->get(\Acme\Blog\Article\ArticleRepository::class);
+        $builder->addDefinitions(__DIR__ . '/../config/config.php');
 
         $compositeContainer->setFallbackContainer($builder->build());
     }
