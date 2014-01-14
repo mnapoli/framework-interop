@@ -1,0 +1,3 @@
+article_list:
+    pattern:  "/"
+    defaults: { _controller: Acme\BlogBundle\Controller\ArticleController:listAction }

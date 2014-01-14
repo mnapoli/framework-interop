@@ -1,0 +1,8 @@
+bin/
+build/
+vendor/
+composer.phar
+composer.lock
+
+.idea/*
+.vagrant/*

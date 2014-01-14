@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-frameworks application</title>
+
+    <link href="{{ app.request.baseUrl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ app.request.baseUrl }}/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="{{ app.request.baseUrl }}/js/jquery-1.10.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ app.request.baseUrl }}/">SuperApp</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ app.request.baseUrl }}/">Home</a></li>
+                <li><a href="{{ app.request.baseUrl }}/blog">Blog</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">(powered by) Silex</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    <script src="{{ app.request.baseUrl }}/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
