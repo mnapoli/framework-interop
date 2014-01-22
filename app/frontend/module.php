@@ -29,3 +29,5 @@ $frontend->get('/', function (Application $app) {
 
     return $app['twig']->render('home.twig', ['articleCount' => $count]);
 });
+
+return $frontend;

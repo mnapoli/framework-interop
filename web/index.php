@@ -5,13 +5,13 @@ use Symfony\Component\HttpFoundation\Request;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-require_once __DIR__ . '/../app/frontend/init.php';
-require_once __DIR__ . '/../app/blog/BlogModule.php';
-require_once __DIR__ . '/../app/backoffice/BackOfficeModule.php';
+$frontend = require __DIR__ . '/../app/frontend/module.php';
+$blog = require __DIR__ . '/../app/blog/module.php';
+$backoffice = require __DIR__ . '/../app/backoffice/module.php';
 
 $map = [
-    '/blog' => new BlogModule('dev', true),
-    '/admin' => new BackOfficeModule(),
+    '/blog' => $blog,
+    '/admin' => $backoffice,
 ];
 
 $router = (new \Stack\Builder())
