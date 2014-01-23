@@ -12,7 +12,9 @@ $frontend['debug'] = true;
 $builder = new \DI\ContainerBuilder();
 //$builder->wrapContainer($frontend);
 $builder->addDefinitions(__DIR__ . '/../config/config.php');
-$frontend->registerFallbackContainer($builder->build());
+$container = $builder->build();
+
+$frontend->registerFallbackContainer($container);
 
 // Views
 $frontend->register(new TwigServiceProvider(), [
