@@ -1,11 +1,11 @@
-This is freaking awesome.
+This is an example of interoperability between frameworks through Framework-agnostic **modules**.
 
     composer install
     php -S localhost:8000 -t web
 
 ## What?
 
-This is **one** application running on 3 different frameworks:
+This is **one** application composed of 3 modules, each one using a different framework:
 
 - the front-end module is running on **Silex** (`/`)
 - the blog module is running on **Symfony 2** (`/blog`)
@@ -13,7 +13,7 @@ This is **one** application running on 3 different frameworks:
 
 ## How it works
 
-An application is divided in **modules**. A module can provide one or more of the followings:
+A module can provide one or more of the followings:
 
 - a DI container
 - an HTTP application
@@ -21,6 +21,9 @@ An application is divided in **modules**. A module can provide one or more of th
 
 When the application is constructed, it will build a root DI container to which all the
 module's containers will be chained.
+
+Then, HTTP/CLI applications can be built using the **root** container (not the module's
+container), which allows to access all the entries of all the container's.
 
 ## How to write a module
 
