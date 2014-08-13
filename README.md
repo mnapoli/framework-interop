@@ -21,3 +21,45 @@ An application is divided in **modules**. A module can provide one or more of th
 
 When the application is constructed, it will build a root DI container to which all the
 module's containers will be chained.
+
+## How to write a module
+
+You start by writing a class that extends `Interop\Framework\Module`:
+
+```php
+namespace Acme\BlogModule;
+
+class BlogModule extends Module
+{
+    public function getName()
+    {
+        return 'blog';
+    }
+
+    /**
+     * You can return a container if the module provides one.
+     *
+     * It will be chained to the application's root container.
+     *
+     * @return ContainerInterface|null
+     */
+    public function getContainer()
+    {
+        return null;
+    }
+
+    /**
+     * You can return an HTTP application if the module provides one.
+     *
+     * @return HttpKernelInterface|null
+     */
+    public function getWebApplication()
+    {
+        return new WebApplication();
+    }
+}
+```
+
+The "web application" can be any class implementing Symfony's `HttpKernelInterface`.
+
+Containers can be any class implementing `Interop\Container\ContainerInterface`.

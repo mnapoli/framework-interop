@@ -18,16 +18,24 @@ abstract class Module
     }
 
     /**
+     * Returns the name of the module.
+     *
      * @return string
      */
     public abstract function getName();
 
     /**
+     * You can return a container if the module provides one.
+     *
+     * It will be chained to the application's root container.
+     *
      * @return ContainerInterface|null
      */
     public abstract function getContainer();
 
     /**
+     * You can return an HTTP application if the module provides one.
+     *
      * @return HttpKernelInterface|null
      */
     public abstract function getWebApplication();
