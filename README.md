@@ -11,19 +11,13 @@ This is **one** application running on 3 different frameworks:
 - the blog module is running on **Symfony 2** (`/blog`)
 - the back-office module is running on **Zend Framework 1** (`/admin`)
 
-These modules are not independent sup-applications. They really are modules of one application:
+## How it works
 
-- they share the same virtual host and URL (each module has a prefix)
-- they share the same DI container and its configuration (PHP-DI is used here)
-- they share the same model and services (loggers, mailer, ORM, repositories, …)
+An application is divided in **modules**. A module can provide one or more of the followings:
 
-The model code (model classes, repositories and services) is framework-agnostic.
+- a DI container
+- an HTTP application
+- a CLI application
 
-## Why?
-
-Because!
-
-## How?
-
-1. Symfony's `HttpKernelInterface` and [Stack](http://stackphp.com/) allows to route each request to the correct framework/module
-2. [Container interoperability](https://github.com/container-interop/container-interop) to make your config/container framework-agnostic
+When the application is constructed, it will build a root DI container to which all the
+module's containers will be chained.

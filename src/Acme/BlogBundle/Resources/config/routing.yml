@@ -1,0 +1,3 @@
+article_list:
+    pattern:  "/blog"
+    defaults: { _controller: AcmeBlogBundle:Article:list }

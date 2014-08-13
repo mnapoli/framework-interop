@@ -1,16 +1,18 @@
 {
     "autoload": {
         "psr-4": {
-            "Acme\\": "src/"
+            "Acme\\": "src/Acme",
+            "Interop\\Framework\\": "src/Interop/Framework"
         }
     },
     "require": {
-        "stack/builder": "~1.0",
-        "stack/url-map": "~1.0",
+        "php": ">=5.5",
+        "container-interop/container-interop": "~1.0",
+        "acclimate/container": "~1.0",
         "silex/silex": "~1.1",
         "symfony/symfony": "~2.3",
         "zendframework/zendframework1": "~1.12",
-        "mnapoli/php-di": "4.*",
+        "mnapoli/php-di": "~4.3",
         "mnapoli/php-di-symfony2": "*",
         "mnapoli/php-di-zf1": "*",
         "mouf/interop.silex.di" : "~1.0",
