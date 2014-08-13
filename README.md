@@ -1,4 +1,4 @@
-This is an example of interoperability between frameworks through Framework-agnostic **modules**.
+This is an example of interoperability between frameworks through framework-agnostic **modules**.
 
     composer install
     php -S localhost:8000 -t web
