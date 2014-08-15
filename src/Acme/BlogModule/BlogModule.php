@@ -19,8 +19,8 @@ class BlogModule extends Module
         return null;
     }
 
-    public function getWebApplication()
+    public function getHttpApplication()
     {
-        return new WebApplication($this->rootContainer, 'dev', true);
+        return new HttpApplication($this->rootContainer, 'dev', true);
     }
 }

@@ -2,4 +2,4 @@
 
 require __DIR__ . '/../app/app.php';
 
-$app->runWeb();
+$app->runHttp();

@@ -23,7 +23,7 @@ class CoreModule extends Module
         return $builder->build();
     }
 
-    public function getWebApplication()
+    public function getHttpApplication()
     {
         return null;
     }

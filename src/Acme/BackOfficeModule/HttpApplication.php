@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Zend_Application;
 use Zend_Controller_Front;
 
-class WebApplication implements HttpKernelInterface
+class HttpApplication implements HttpKernelInterface
 {
     /**
      * @var ContainerInterface

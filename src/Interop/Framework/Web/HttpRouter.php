@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
-class WebRouter implements HttpKernelInterface
+class HttpRouter implements HttpKernelInterface
 {
     /**
      * @var string[]
@@ -43,10 +43,10 @@ class WebRouter implements HttpKernelInterface
             if (0 === strpos($pathInfo, $path)) {
                 $module = $this->modules[$moduleName];
 
-                $app = $module->getWebApplication();
+                $app = $module->getHttpApplication();
 
                 if (! $app instanceof HttpKernelInterface) {
-                    throw new Exception("$moduleName::getWebApplication() doesn't return a web application through");
+                    throw new Exception("$moduleName::getHttpApplication() doesn't return a web application through");
                 }
 
                 return $app->handle($request, $type, $catch);

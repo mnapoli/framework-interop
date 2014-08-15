@@ -15,7 +15,7 @@ use Symfony\Bundle\WebProfilerBundle\WebProfilerBundle;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-class WebApplication extends Kernel
+class HttpApplication extends Kernel
 {
     private $rootContainer;
 

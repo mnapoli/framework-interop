@@ -6,7 +6,7 @@ use Acclimate\Container\CompositeContainer;
 use Acme\Blog\Article\ArticleRepository;
 use Exception;
 use Interop\Container\ContainerInterface;
-use Interop\Framework\Web\WebRouter;
+use Interop\Framework\Web\HttpRouter;
 use Symfony\Component\HttpFoundation\Request;
 
 class Application
@@ -58,9 +58,9 @@ class Application
         $this->routes = $routes;
     }
 
-    public function runWeb()
+    public function runHttp()
     {
-        $router = new WebRouter($this->routes, $this->modules);
+        $router = new HttpRouter($this->routes, $this->modules);
 
         $request = Request::createFromGlobals();
 

@@ -8,7 +8,7 @@ use Mouf\Interop\Silex\Application;
 use Psr\Log\LoggerInterface;
 use Silex\Provider\TwigServiceProvider;
 
-class WebApplication extends Application
+class HttpApplication extends Application
 {
     public function __construct(ContainerInterface $container)
     {

@@ -38,5 +38,5 @@ abstract class Module
      *
      * @return HttpKernelInterface|null
      */
-    public abstract function getWebApplication();
+    public abstract function getHttpApplication();
 }

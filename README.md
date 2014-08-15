@@ -56,13 +56,13 @@ class BlogModule extends Module
      *
      * @return HttpKernelInterface|null
      */
-    public function getWebApplication()
+    public function getHttpApplication()
     {
-        return new WebApplication();
+        return new HttpApplication();
     }
 }
 ```
 
-The "web application" can be any class implementing Symfony's `HttpKernelInterface`.
+HTTP applications can be any class implementing Symfony's `HttpKernelInterface`.
 
 Containers can be any class implementing `Interop\Container\ContainerInterface`.

@@ -19,8 +19,8 @@ class BackOfficeModule extends Module
         return null;
     }
 
-    public function getWebApplication()
+    public function getHttpApplication()
     {
-        return new WebApplication($this->rootContainer);
+        return new HttpApplication($this->rootContainer);
     }
 }
