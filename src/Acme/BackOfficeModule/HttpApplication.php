@@ -32,11 +32,7 @@ class HttpApplication implements HttpKernelInterface
             APPLICATION_PATH . '/configs/application.ini'
         );
 
-        $dispatcher = new Dispatcher();
-        $dispatcher->setContainer($this->container);
-
-        $frontController = Zend_Controller_Front::getInstance();
-        $frontController->setDispatcher($dispatcher);
+        \Zend_Registry::set('container', $this->container);
 
         ob_start();
 

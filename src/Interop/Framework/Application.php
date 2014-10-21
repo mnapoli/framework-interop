@@ -3,7 +3,6 @@
 namespace Interop\Framework;
 
 use Acclimate\Container\CompositeContainer;
-use Acme\Blog\Article\ArticleRepository;
 use Exception;
 use Interop\Container\ContainerInterface;
 use Interop\Framework\Web\HttpRouter;
