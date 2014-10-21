@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "372249215e333a20fddec8dc06cb69e2",
+    "hash": "9b1781aa678bd404fb369085310a5c83",
     "packages": [
         {
             "name": "acclimate/container",
@@ -1689,7 +1689,8 @@
     "stability-flags": [],
     "prefer-stable": true,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "ext-intl": "*"
     },
     "platform-dev": []
 }
