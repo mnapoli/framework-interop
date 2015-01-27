@@ -20,11 +20,6 @@ class BackOfficeModule implements ModuleInterface
     {
         return null;
     }
-
-    /*public function getHttpApplication()
-    {
-        return new HttpApplication($this->rootContainer);
-    }*/
     
     public function init(ContainerInterface $rootContainer) {
     	/* @var $stackBuilder \Stack\Builder */
