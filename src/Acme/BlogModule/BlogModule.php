@@ -22,11 +22,6 @@ class BlogModule implements ModuleInterface
         return null;
     }
 
-    /*public function getHttpApplication()
-    {
-        return new HttpApplication($this->rootContainer, 'dev', true);
-    }*/
-    
     public function init(ContainerInterface $rootContainer) {
     	/* @var $stackBuilder \Stack\Builder */
     	$stackBuilder = $rootContainer->get('stackBuilder');
