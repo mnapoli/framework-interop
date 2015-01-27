@@ -22,9 +22,3 @@ $app = new Application(
     ],
     $container
 );
-
-$app->setWebRoutes([
-    '/blog' => BlogModule::class,
-    '/admin' => BackOfficeModule::class,
-    '/' => FrontendModule::class,
-]);

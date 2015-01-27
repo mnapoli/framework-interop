@@ -2,25 +2,36 @@
 
 namespace Acme\BackOfficeModule;
 
-use Interop\Framework\Module;
+use Interop\Framework\ModuleInterface;
+use Interop\Container\ContainerInterface;
+use Stack\UrlMap;
 
 /**
  * The back office module is a ZF1 application.
  */
-class BackOfficeModule extends Module
+class BackOfficeModule implements ModuleInterface
 {
     public function getName()
     {
         return 'backoffice';
     }
 
-    public function getContainer()
+    public function getContainer(ContainerInterface $rootContainer)
     {
         return null;
     }
 
-    public function getHttpApplication()
+    /*public function getHttpApplication()
     {
         return new HttpApplication($this->rootContainer);
+    }*/
+    
+    public function init(ContainerInterface $rootContainer) {
+    	/* @var $stackBuilder \Stack\Builder */
+    	$stackBuilder = $rootContainer->get('stackBuilder');
+    	 
+    	$stackBuilder->push(UrlMap::class, [
+    			'/admin' => new HttpApplication($rootContainer)
+    	]);
     }
 }
