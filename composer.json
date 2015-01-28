@@ -26,7 +26,8 @@
 		"stack/builder": "~1.0",
 		"mouf/picotainer": "~1.0",
 		"stack/url-map": "~1.0",
-		"mouf/silex-middleware": "~1.0"
+		"mouf/silex-middleware": "~1.0",
+		"mouf/symfony-middleware": "~1.0"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true

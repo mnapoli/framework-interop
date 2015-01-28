@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "11fd66d63821bd10b399038862f79441",
+    "hash": "3ff8a824a57eaf4dd8ce2f43b3ff7196",
     "packages": [
         {
             "name": "acclimate/container",
@@ -489,7 +489,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -543,7 +543,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -963,6 +963,55 @@
                 "stack"
             ],
             "time": "2015-01-27 18:07:16"
+        },
+        {
+            "name": "mouf/symfony-middleware",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/symfony-middleware.git",
+                "reference": "3ef9d0e87b0efea780f93ce0a263ebb6511a80ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/symfony-middleware/zipball/3ef9d0e87b0efea780f93ce0a263ebb6511a80ca",
+                "reference": "3ef9d0e87b0efea780f93ce0a263ebb6511a80ca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/http-kernel": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "mouf": {
+                    "logo": "logo.png"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mouf\\StackPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Négrier",
+                    "email": "d.negrier@thecodingmachine.com",
+                    "homepage": "http://mouf-php.com"
+                }
+            ],
+            "description": "This package provides a StackPHP middleware that can be used to use a Symfony application as a middleware (instead of an app)",
+            "homepage": "https://github.com/thecodingmachine/symfony-middleware",
+            "keywords": [
+                "StackPHP",
+                "silex",
+                "stack"
+            ],
+            "time": "2015-01-28 14:13:04"
         },
         {
             "name": "myclabs/php-enum",
@@ -1635,12 +1684,12 @@
             "version": "v1.16.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
+                "url": "https://github.com/twigphp/Twig.git",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "shasum": ""
             },
