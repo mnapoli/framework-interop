@@ -10,7 +10,7 @@
 		"container-interop/container-interop" : "~1.0",
 		"acclimate/container" : "~1.0",
 		"silex/silex" : "~1.1",
-		"symfony/symfony" : "~2.3",
+		"symfony/symfony" : "~2.5.5",
 		"zendframework/zendframework1" : "~1.12",
 		"mnapoli/php-di" : "~4.3",
 		"mnapoli/php-di-symfony2" : "*",
