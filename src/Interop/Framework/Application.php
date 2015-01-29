@@ -36,13 +36,6 @@ class Application
     {
         $this->container = new CompositeContainer();
 
-        // TODO: stackBuilder could be pushed in its own module!
-        $localContainer = new Picotainer([
-            "stackBuilder" => function(ContainerInterface $container) { return new Builder(); }
-        ], $this->container);
-        
-        $this->container->addContainer($localContainer);
-        
         if ($container) {
             $this->container->addContainer($container);
         }
@@ -74,7 +67,7 @@ class Application
     private function init() {
         // Init every module
         foreach ($this->modules as $module) {
-            $module->init($this->container);
+            $module->init();
         }
     }
 
@@ -86,17 +79,20 @@ class Application
     public function runHttp()
     {
         $this->init();
-        $builder = $this->container->get('stackBuilder');
         
         // default app to return a 404 since we declare no route in it!
         $app = new \Silex\Application();
         
-        /* @var $builder \Stack\Builder */
-        $router = $builder->resolve($app);
+        $reverseModules = array_reverse($this->modules);
+        foreach ($reverseModules as $module) {
+        	if ($module instanceof HttpModuleInterface) {
+        		$app = $module->getHttpMiddleware($app);
+        	}
+        }
         
         $request = Request::createFromGlobals();
 
-        $response = $router->handle($request);
+        $response = $app->handle($request);
         $response->send();
     }
 

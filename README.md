@@ -88,7 +88,7 @@ class BlogModule extends HttpModuleInterface
      * @param $app HttpKernelInterface The kernel your middleware will be wrapping.
      * @return HttpKernelInterface|null
      */
-    public function getHttpApplication(HttpKernelInterface $app)
+    public function getHttpMiddleware(HttpKernelInterface $app)
     {
         return new MyMiddleware($app);
     }

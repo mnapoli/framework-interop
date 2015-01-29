@@ -28,7 +28,7 @@ class CoreModule implements ModuleInterface
 	/* (non-PHPdoc)
 	 * @see \Interop\Framework\ModuleInterface::init()
 	 */
-	public function init(ContainerInterface $rootContainer) {
+	public function init() {
 		// Does nothing
 	}
 

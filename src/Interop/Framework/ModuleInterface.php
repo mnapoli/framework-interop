@@ -26,9 +26,6 @@ interface ModuleInterface
 
     /**
      * You can provide init scripts here.
-     *
-     * @param ContainerInterface $rootContainer
-     * @return HttpKernelInterface|null
      */
-    function init(ContainerInterface $rootContainer);
+    function init();
 }

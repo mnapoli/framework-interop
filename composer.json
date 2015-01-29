@@ -1,34 +1,33 @@
 {
-	"autoload": {
-		"psr-4": {
-			"Acme\\": "src/Acme",
-			"Interop\\Framework\\": "src/Interop/Framework"
+	"autoload" : {
+		"psr-4" : {
+			"Acme\\" : "src/Acme",
+			"Interop\\Framework\\" : "src/Interop/Framework"
 		}
 	},
-	"require": {
-		"php": ">=5.5",
-		"container-interop/container-interop": "~1.0",
-		"acclimate/container": "~1.0",
-		"silex/silex": "~1.1",
-		"symfony/symfony": "~2.3",
-		"zendframework/zendframework1": "~1.12",
-		"mnapoli/php-di": "~4.3",
-		"mnapoli/php-di-symfony2": "*",
-		"mouf/interop.silex.di": "~1.0",
-		"twig/twig": "~1.8",
-		"doctrine/orm": "2.*",
-		"psr/log": "~1.0",
-		"monolog/monolog": "~1.6",
-		"sensio/distribution-bundle": "~2.3",
-		"sensio/framework-extra-bundle": "~2.3",
-		"sensio/generator-bundle": "~2.3",
-		"ext-intl": "*",
-		"stack/builder": "~1.0",
-		"mouf/picotainer": "~1.0",
-		"stack/url-map": "~1.0",
-		"mouf/silex-middleware": "~1.0",
-		"mouf/symfony-middleware": "~1.0"
+	"require" : {
+		"php" : ">=5.5",
+		"container-interop/container-interop" : "~1.0",
+		"acclimate/container" : "~1.0",
+		"silex/silex" : "~1.1",
+		"symfony/symfony" : "~2.3",
+		"zendframework/zendframework1" : "~1.12",
+		"mnapoli/php-di" : "~4.3",
+		"mnapoli/php-di-symfony2" : "*",
+		"mouf/interop.silex.di" : "~1.0",
+		"twig/twig" : "~1.8",
+		"doctrine/orm" : "2.*",
+		"psr/log" : "~1.0",
+		"monolog/monolog" : "~1.6",
+		"sensio/distribution-bundle" : "~2.3",
+		"sensio/framework-extra-bundle" : "~2.3",
+		"sensio/generator-bundle" : "~2.3",
+		"ext-intl" : "*",
+		"mouf/picotainer" : "~1.0",
+		"stack/url-map" : "~1.0",
+		"mouf/silex-middleware" : "~1.0",
+		"mouf/symfony-middleware" : "~1.0"
 	},
-	"minimum-stability": "dev",
-	"prefer-stable": true
+	"minimum-stability" : "dev",
+	"prefer-stable" : true
 }
